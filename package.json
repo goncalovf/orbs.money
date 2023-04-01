@@ -1,0 +1,36 @@
+{
+  "name": "orbs.money",
+  "version": "1.0.0",
+  "description": "Website for NFT project at orbs.money",
+  "private": true,
+  "scripts": {
+    "dev": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "author": "Gonçalo Figueiredo — goncalovf.com",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "css-loader": "^6.7.3",
+    "cssnano": "^6.0.0",
+    "eslint": "^8.36.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-webpack-plugin": "^4.0.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-loader": "^7.1.0",
+    "postcss-sorting": "^8.0.2",
+    "sass": "^1.60.0",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

@@ -1,0 +1,27 @@
+$breakpoints: (
+  medium: 768px,
+);
+
+@mixin bp($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @media (min-width: #{$breakpoint}) {
+      @content;
+    }
+  }
+}
+
+@mixin bp-below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint) - 1px}) {
+      @content;
+    }
+  } @else {
+    @media (max-width: #{$breakpoint - 1px}) {
+      @content;
+    }
+  }
+}

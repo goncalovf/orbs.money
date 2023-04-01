@@ -1,0 +1,133 @@
+@import 'commons';
+
+a, a:link, a:visited, a:focus, a:hover, a:active {
+  text-decoration: none;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  font-family: Source Sans Pro, sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  width: 50px;
+
+  @include bp(medium) {
+    width: 60px;
+  }
+}
+
+.twitter-icon {
+  height: 25px;
+
+  @include bp(medium) {
+    height: 30px;
+  }
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.hero {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+
+  &__container {
+    flex: 0 0 100%;
+    margin-top: -40px;
+    position: relative;
+
+    @include bp(medium) {
+      flex: 0 0 66%;
+      margin-top: -75px;
+    }
+  }
+
+  &__orb {
+    position: absolute;
+    right: 0;
+    width: 27%;
+
+    @include bp(768px) {
+      width: 30%;
+    }
+  }
+
+  &__image {
+    &--desktop {
+      display: none;
+
+      @include bp(medium) {
+        display: block;
+      }
+    }
+
+    &--mobile {
+      @include bp(medium) {
+        display: none;
+      }
+    }
+  }
+}
+
+.tagline {
+  color: #fff;
+  flex: 0.5;
+  font-size: 1.5rem;
+  text-align: center;
+
+  @include bp(medium) {
+    display: none;
+  }
+}
+
+.cta {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  @include bp(medium) {
+    margin-bottom: 5rem;
+  }
+
+  &__launch-notice {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  &__twitter-cta {
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+
+    &:hover {
+      background-color: #fff;
+      color: black;
+    }
+  }
+}
